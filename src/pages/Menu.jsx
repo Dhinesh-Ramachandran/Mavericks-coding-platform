@@ -49,7 +49,7 @@ export default function Menu() {
             className="px-6 py-4 rounded-xl bg-white/5 hover:bg-cyan-500/20 transition text-left"
             onClick={() => navigate('/ai-resume')}
           >
-            📄 Resume Builder
+            📄 AI Resume Analyzer
           </button>
         </div>
 
