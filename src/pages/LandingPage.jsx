@@ -81,16 +81,18 @@ const HeroSection = ({ id, bg }) => {
         <section ref={ref} id={id} className="h-screen flex items-center justify-center text-center" data-bg={bg}>
             <div className="z-10 px-4">
                 <h1 className={`text-5xl md:text-7xl lg:text-8xl font-black text-white text-glow tracking-tighter transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    Stop Learning. Start Building.
+                    Dive into immersive rewarding learning platform
                 </h1>
                 <p className={`mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-300 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                     Mavericks is the ultimate AI-powered platform designed to forge elite developers. Ditch the tutorials and accelerate your journey from zero to hero.
                 </p>
-                <div className={`mt-10 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                    <a href="#" className="inline-block bg-indigo-600 text-white text-lg font-bold px-10 py-4 rounded-xl shadow-2xl shadow-indigo-600/40 transition-transform hover:scale-105 transform">
-                        Start Hacking Now
-                    </a>
-                </div>
+              <motion.button
+  className="px-10 py-4 rounded-xl bg-indigo-600 text-white text-lg font-bold shadow-2xl shadow-indigo-600/40 hover:bg-indigo-700 transition-all duration-300"
+  whileHover={{ scale: 1.05 }}
+  onClick={() => (window.location.href = '/register')}
+>
+  Start your Journey
+</motion.button>
             </div>
         </section>
     );
@@ -154,24 +156,7 @@ const RoadmapSection = ({ id, bg }) => {
 };
 
 
-const EditorLayoutsSection = ({ id, bg }) => (
-     <Section id={id} bg={bg}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 className="text-4xl md:text-5xl font-black text-white">The Perfect Workspace. For Any Task.</h2>
-                    <p className="mt-6 text-lg text-gray-300">Our Monaco-based editor isn't just a tool; it's an environment. Adapt your layout to match your workflow, whether you're deep in thought or in a race against the clock.</p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="glass-card p-6"><h4 className="font-bold text-white text-lg">Focus Mode</h4><p className="text-sm text-gray-400 mt-2">Full-screen editor for maximum concentration.</p></div>
-                    <div className="glass-card p-6"><h4 className="font-bold text-white text-lg">Split Mode</h4><p className="text-sm text-gray-400 mt-2">Problem statement and editor side-by-side.</p></div>
-                    <div className="glass-card p-6"><h4 className="font-bold text-white text-lg">AI-Dock Mode</h4><p className="text-sm text-gray-400 mt-2">Your personal AI assistant, ready to help.</p></div>
-                    <div className="glass-card p-6"><h4 className="font-bold text-white text-lg">Challenge Mode</h4><p className="text-sm text-gray-400 mt-2">Timer and gamified UI for competitive events.</p></div>
-                </div>
-            </div>
-        </div>
-    </Section>
-);
+
 
 const HackathonSection = ({ id, bg }) => (
     <Section id={id} bg={bg}>
@@ -200,11 +185,11 @@ const HackathonSection = ({ id, bg }) => (
 const TestimonialsSection = ({ id, bg }) => (
     <Section id={id} bg={bg}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-black text-white">From The Community</h2><p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Don't just take our word for it. Here's what our users are saying.</p></div>
+            <div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-black text-white">From The Builders</h2><p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Don't just take our word for it. Here's what our users are saying.</p></div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="glass-card p-8"><p className="text-gray-300">"Mavericks completely changed the game for me. The AI features cut my learning time in half. I feel like I have superpowers."</p><div className="mt-4 font-bold text-white">- Alex J, Former Bootcamp Grad</div></div>
-                <div className="glass-card p-8"><p className="text-gray-300">"The hackathons are intense and incredibly fun. It's the best way to apply what you've learned under pressure. I'm addicted."</p><div className="mt-4 font-bold text-white">- Sarah K, University Student</div></div>
-                <div className="glass-card p-8"><p className="text-gray-300">"I've tried every platform out there. Nothing comes close to the editor and the gamified experience here. 10/10."</p><div className="mt-4 font-bold text-white">- Mike P, Senior Engineer</div></div>
+                <div className="glass-card p-8"><p className="text-gray-300">"Mavericks really brought some real competition i guess."</p><div className="mt-4 font-bold text-white">- Suganthan Prabhakaran</div></div>
+                <div className="glass-card p-8"><p className="text-gray-300">"Had great lessons and great team work."</p><div className="mt-4 font-bold text-white">- Shyam Ganesh</div></div>
+                <div className="glass-card p-8"><p className="text-gray-300">"Its all the in the game, look up. 10/10."</p><div className="mt-4 font-bold text-white">- Ravi Bharathi</div></div>
             </div>
         </div>
     </Section>
@@ -221,7 +206,7 @@ const CtaSection = ({ id, bg }) => (
 );
 
 const Footer = () => (
-    <footer className="bg-black bg-opacity-50 mt-auto"><div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8"><div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"><p className="text-gray-400 text-sm">&copy; 2025 Mavericks. All rights reserved.</p><div className="flex space-x-6"><a href="#" className="text-gray-400 hover:text-white transition-colors">Twitter</a><a href="#" className="text-gray-400 hover:text-white transition-colors">GitHub</a><a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a></div></div></div></footer>
+    <footer className="bg-black bg-opacity-50 mt-auto"><div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8"><div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"><p className="text-gray-400 text-sm">&copy; Made for Mavericks Hackathon 2025</p><div className="flex space-x-6"><a href="#" className="text-gray-400 hover:text-white transition-colors">Twitter</a><a href="#" className="text-gray-400 hover:text-white transition-colors">GitHub</a><a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a></div></div></div></footer>
 );
 
 // --- Main App Component ---
@@ -270,7 +255,6 @@ export default function App() {
                     <HeroSection id="hero" bg="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" />
                     <FeaturesSection id="features" bg="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" />
                     <RoadmapSection id="roadmap" bg="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" />
-                    <EditorLayoutsSection id="editor" bg="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" />
                     <HackathonSection id="hackathons" bg="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" />
                     <TestimonialsSection id="testimonials" bg="https://images.unsplash.com/photo-1521898294357-1617e07e411b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" />
                     <CtaSection id="cta" bg="https://images.unsplash.com/photo-1522252234503-e356532cafd5?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3" />
