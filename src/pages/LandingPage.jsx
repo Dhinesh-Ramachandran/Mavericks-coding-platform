@@ -200,8 +200,6 @@ const CtaSection = ({ id, bg }) => (
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-6xl font-black text-white text-glow">Join the Revolution.</h2>
             <p className="mt-6 text-lg md:text-xl text-gray-300">Your journey to becoming a top-tier developer starts now. Are you ready to build the future?</p>
-            <div className="mt-10"><a href="#" className="inline-block bg-indigo-600 text-white text-lg font-bold px-10 py-4 rounded-xl shadow-2xl shadow-indigo-600/40 transition-transform hover:scale-105 transform">Claim Your Spot</a></div>
-        </div>
     </Section>
 );
 
@@ -252,7 +250,7 @@ export default function App() {
             <div id="root-content" className="relative">
                 <Navbar />
                 <main className="overflow-x-hidden">
-                    <HeroSection id="hero" bg="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" />
+                    <HeroSection id="hero" bg="https://wallpapercave.com/wp/wp1978969.jpg" />
                     <FeaturesSection id="features" bg="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" />
                     <RoadmapSection id="roadmap" bg="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" />
                     <HackathonSection id="hackathons" bg="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" />
